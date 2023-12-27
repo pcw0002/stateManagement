@@ -12,19 +12,19 @@ const CompareUsers = () => {
   const invalidateBothQueries = () => {
     // You can invalidate multiple queries at once by passing an array of query keys
     // In this case we are invalidating queries that start with 'user'
-    void queryClient.invalidateQueries({ queryKey: ['user']})
+    void queryClient.invalidateQueries({ queryKey: ['User']})
   }
 
   const invalidateUser1Query = () => {
     // You can also invalidate a single query by passing a query key
     // In this case we are invalidating the query with the key ['user', 1']
-    void queryClient.invalidateQueries({ queryKey: ['user', 1]})
+    void queryClient.invalidateQueries({ queryKey: ['User', 1]})
   }
 
   const invalidateUser2Query = () => {
     // You can also invalidate a single query by passing a query key
     // In this case we are invalidating the query with the key ['user', 2']
-    void queryClient.invalidateQueries({ queryKey: ['user', 2]})
+    void queryClient.invalidateQueries({ queryKey: ['User', 2]})
   }
 
   return (

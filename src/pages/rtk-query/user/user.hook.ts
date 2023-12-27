@@ -51,7 +51,7 @@ const useGetUser = (id: number) => {
     return data
   }
 
-  const { data, isLoading, isError, error } = useQuery({ queryKey: ['User', id], queryFn: queryFunction })
+  const { data, isLoading, isError, error } = useQuery({ queryKey: ['user', id], queryFn: queryFunction })
   return { data, isLoading, isError, error }
 }
 
@@ -62,7 +62,7 @@ const useUpdateTodo = () => {
     return data
   }
 
-  return useMutation({ mutationFn: mutationFunction, mutationKey: ['updateTodo'] })
+  return useMutation({ mutationFn: mutationFunction })
 }
 
 export { useGetAllUsers, useGetUser, useUpdateTodo }

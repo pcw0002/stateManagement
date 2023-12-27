@@ -19,10 +19,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         },
       })
         .then((data) => {
-          const invalidateQuery = ['user', data.userId]
+          const invalidateQuery = ['User', data.userId]
           return res.status(200).json({
             shouldInvalidate: true,
             invalidateQuery,
+            todo: data,
           });
         })
         .catch(() => {
