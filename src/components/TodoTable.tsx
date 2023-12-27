@@ -10,7 +10,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { Checkbox } from "@/components/ui/checkbox"
-import { useGetUser, useUpdateTodo } from "../pages/react-query/user/user.hook"
+import { useGetUser, useUpdateTodo } from "../hooks/user.hook"
 
 const TodoTable = ({userId}: {userId: number}) => {
   const { data, isLoading, isError, error } = useGetUser(userId)

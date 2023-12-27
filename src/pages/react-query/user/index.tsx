@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import Link from 'next/link'
-import { useGetAllUsers } from "./user.hook"
+import { useGetAllUsers } from "../../../hooks/user.hook"
 import RQLayout from "../layout"
 import type { NextPageWithLayout } from '../../_app'
 import {
