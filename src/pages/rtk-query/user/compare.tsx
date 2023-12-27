@@ -1,30 +1,13 @@
 'use client'
 import type { ReactElement } from 'react'
-import { Button } from "@/components/ui/button";
+import { useAppSelector } from '~/utils/store'
 import RTKLayout from "../layout"
 import TodoTableRTK from "../../../components/TodoTableRTK";
 
 const CompareUsers = () => {
-
-  // //const queryClient = useQueryClient()
-
-  // const invalidateBothQueries = () => {
-  //   // You can invalidate multiple queries at once by passing an array of query keys
-  //   // In this case we are invalidating queries that start with 'user'
-  //   void queryClient.invalidateQueries({ queryKey: ['user']})
-  // }
-
-  // const invalidateUser1Query = () => {
-  //   // You can also invalidate a single query by passing a query key
-  //   // In this case we are invalidating the query with the key ['user', 1']
-  //   void queryClient.invalidateQueries({ queryKey: ['user', 1]})
-  // }
-
-  // const invalidateUser2Query = () => {
-  //   // You can also invalidate a single query by passing a query key
-  //   // In this case we are invalidating the query with the key ['user', 2']
-  //   void queryClient.invalidateQueries({ queryKey: ['user', 2]})
-  // }
+  // You can access the store here to get other data that might not be provided
+  // via RTK query
+  const reduxState = useAppSelector((state) => state)
 
   return (
     <div className="w-3/4 m-auto">
